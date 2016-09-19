@@ -141,7 +141,7 @@ More about mutants
 that aids modifying object, function or class behaviour,
 stacking such modifications
 and switching `currently active modification stacks' easily on the fly.
-Check it out on pypi: https://pypi.org/project/hacks
+Check it out: https://github.com/t184256/hacks
 
 `mutants` is similar to `wrapt.ObjectProxy` or `lazy-object-proxy`
 but with bugs and flexibility instead of laziness, caching and performance.
