@@ -1,0 +1,17 @@
+language: python
+python:
+- '3.3'
+- '3.4'
+- '3.4'
+- '3.5'
+- nightly
+install: pip install --upgrade -r requirements.txt setuptools>=17.1 pbr>=1.9
+cache: pip
+script: nosetests
+deploy:
+  provider: pypi
+  user: t184256
+  password:
+    secure: RoFyiE/Pc6czVL6Z+O/pVWi7qZ6BPLDioXN3ruWtvikuMpv2LrqeOvFY8rfd4U4whZp6g0oGLQDdvtj+LAP0mN6sVAopZfnL3t1dgJPRQfoypzNDqc/8xn9NKC0CnCcbW1ncTEZSJaEQl+1BRxEa8HT4ec21DgbNXWxKbq9sDuOhjTGsxnAyu/uSvvnZpesVsMXWWNbwfH4VdLT5Jl1FUUUmXE0bFmvevo6+UhfpAj2v1NeXX9Ur2hqkkp6Bb05JeKOYIglFdlSOaOBTd6zMA2cWU4ourwjgUsLQgZYCclgSNvJZDvPtB3ivOiyNgidFx1x7R5afEALQCeVU1nqmd4kWhjnDPmoWhsJHabW6zsIoKYKEW8fC68Q6/h0AGiSqvp0REh4s7SGKTwnm5x3j5UG6w7lsN+ak57rpyxc1DULJy6UToGETfxwaYr1lHQQ4pFwFKkSAIJF4ioHvgUmu06Emq83wKBm0Cq0ZzCyCK/q/DE+ph0m6BJDwRpgRDjimF7IflANrCqrDDu6imFH6RWK391Y3TgeuB1eUcOT227ZnYtoxa44Xb7R/OcYTJV83obTwDMH83K1j809zOXWAvm+Rd1R0mL3yRYxJl8NijnT9i1zBjlLEqOpakVXvmB+/cZdH48cM4QSVozSi8iTN11a31ZfiQIjBKs2JMXZgXj8=
+  on:
+    tags: true
