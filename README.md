@@ -105,7 +105,7 @@ and the callable will probably return something else next time.
 In this pure Python implementation it's implemented as:
 ```python
 def ImmutableMutant(mutator):
-    OnAccessMutant(None, lambda _: mutator())
+    return OnAccessMutant(None, lambda _: mutator())
 ```
 Future C extensions may implement it separately for performance benefits.
 
