@@ -25,4 +25,4 @@ from .immutable_mutant import *
 from .classhopper_mutant import *
 
 
-__all__ = ['OnAccessMutant', 'ImmutableMutant', 'ClassyMutant']
+__all__ = ['OnAccessMutant', 'ImmutableMutant', 'ClassHopperMutant']
