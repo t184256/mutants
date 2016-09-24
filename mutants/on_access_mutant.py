@@ -74,7 +74,6 @@ class OnAccessMutant(metaclass=_MetaImmutableMutant):
     witha mutator function.
     But this object doesn't have to be constant:
     it's reevaluated on every access by calling the provided callable.
-    In fact it isn't even stored inside this class!
 
     Usage: OnAccessMutant(initial_object, callable_mutator)
     where: callable_mutator(wrapped_object) -> new_wrapped_object
