@@ -53,7 +53,7 @@ def _delitem(w, k):
 SPECIAL_METHODS = {
     #'__new__': _will_give_up('no __new__'),
     #'__init__': _will_give_up('no __init__'),
-    '__del__': lambda _: None,
+    #'__del__': lambda _: None,  # gc will call the right __del__ directly
     '__repr__': repr,
     '__str__': str,
     '__bytes__': bytes,

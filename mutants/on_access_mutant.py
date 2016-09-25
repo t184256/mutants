@@ -53,8 +53,6 @@ def _delegate_or(smethname, func):
         if not isinstance(wrapped, type):
             return meth(*a, **kwa)
         else:
-            if smethname == '__del__':
-                return
             meth = getattr(type(wrapped), smethname)
             return meth(wrapped, *a, **kwa)
 
