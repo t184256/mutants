@@ -50,7 +50,13 @@ def _delegate_or(smethname, func):
             meth = getattr(wrapped, smethname)
         except AttributeError:
             return func(wrapped, *a, **kwa)
-        return meth(*a, **kwa)
+        if not isinstance(wrapped, type):
+            return meth(*a, **kwa)
+        else:
+            if smethname == '__del__':
+                return
+            meth = getattr(type(wrapped), smethname)
+            return meth(wrapped, *a, **kwa)
 
     return delegated
 
